@@ -6,6 +6,8 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "dev": "nodemon ./bin/www",
+    "postinstall": "npm install --prefix client",
+    "build": "cd client && npm run build",
     "migrate": "node model/database.js"
   },
   "dependencies": {
