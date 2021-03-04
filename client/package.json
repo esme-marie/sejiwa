@@ -7,7 +7,7 @@
     "npm": "6.x"
   },
   "scripts": {
-    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi ",
+    "postinstall": "npm run build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
