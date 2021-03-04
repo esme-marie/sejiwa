@@ -7,7 +7,6 @@
     "npm": "6.x"
   },
   "scripts": {
-    "postinstall": "npm install express",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
