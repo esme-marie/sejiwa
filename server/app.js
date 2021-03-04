@@ -18,9 +18,16 @@ app.use(cookieParser());
 // Serve static files from the React frontend app
 //app.use(express.static(path.join(__dirname, "client/dist")));
 
-app.get("/", function(req, res, next) {
-  res.send("Access the API at path /api");
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+}
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
+
+// app.get("/", function(req, res, next) {
+//   res.send("Access the API at path /api");
+// });
 
 app.use('/api', apiRouter)
 app.use('/api/auth', userRouter)
