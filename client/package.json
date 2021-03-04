@@ -13,7 +13,7 @@
     "test:unit": "vue-cli-service test:unit",
     "test": "jest",
     "lint": "vue-cli-service lint",
-    "start": "vue-cli-service start"
+    "start": "vue-cli-service serve --open"
   },
   "jest": {
     "verbose": true,
