@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "dev": "nodemon ./bin/www",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "postinstall": "npm install --prefix client",
+    "build": "cd client && npm run build",
     "migrate": "node model/database.js"
   },
   "dependencies": {
